@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class CreateUnitTable {
+public class CreativeUnitTable {
     private Long addId;
     private Long unitId;
 }
