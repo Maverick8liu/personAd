@@ -15,7 +15,7 @@ spring:
  datasource:
    url: jdbc:mysql:127.0.0.1:3306/imooc_ad_data?autoReconnect=true
    username: root
-   password: 1234
+   password: root
    tomcat:
      max-active: 4
      min-idle: 2
