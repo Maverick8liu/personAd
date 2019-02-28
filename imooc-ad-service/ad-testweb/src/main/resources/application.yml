@@ -1,0 +1,13 @@
+server:
+  port: 7001
+  servlet:
+    context-path: /ad-first
+
+spring:
+  application:
+    name: eureka-client-ad-first
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://server1:8000/eureka/
