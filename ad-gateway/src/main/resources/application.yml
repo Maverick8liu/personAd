@@ -19,3 +19,4 @@ zuul:
       path: /ad-search/**
       serviceId: eureka-client-ad-search
       strip-prefix: false
+      #127.0.1.1:9000/imooc/ad-search/fetchAds

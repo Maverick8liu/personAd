@@ -11,7 +11,7 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "creative")
+@Table(name = "ad_creative")
 public class Creative {
 
     @Id

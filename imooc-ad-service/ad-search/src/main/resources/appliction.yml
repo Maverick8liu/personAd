@@ -14,7 +14,7 @@ spring:
       hibernate.format_sql: true
     open-in-view: false
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/imooc_ad_data?autoReconnect=true&serverTimezone=UTC
+    url: jdbc:mysql://127.0.0.1:3306/imooc_ad_data1?autoReconnect=true&serverTimezone=UTC
     username: root
     password: root
     tomcat:
