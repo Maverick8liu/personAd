@@ -4,15 +4,15 @@ import com.imooc.ad.annotation.IgnoreReponseAdvice;
 import com.imooc.ad.vo.CommonResponse;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;
+import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.server.ServerHttpRequest;
 import org.springframework.http.server.ServerHttpResponse;
 import org.springframework.lang.Nullable;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 
 @RestControllerAdvice
-public class CommonResponseDataAdvice implements ResponseBodyAdvice{
+public class CommonResponseDataAdvice implements ResponseBodyAdvice<Object>{
     @Override
     @SuppressWarnings("all")
     public boolean supports(MethodParameter methodParameter, Class aClass) {
@@ -27,6 +27,29 @@ public class CommonResponseDataAdvice implements ResponseBodyAdvice{
     }
 
     @Nullable
+    @Override
+    @SuppressWarnings("all")
+    public Object beforeBodyWrite(@Nullable Object o,
+                                  MethodParameter methodParameter,
+                                  MediaType mediaType,
+                                  Class<? extends HttpMessageConverter<?>> aClass,
+                                  ServerHttpRequest serverHttpRequest,
+                                  ServerHttpResponse serverHttpResponse) {
+        CommonResponse<Object> response = new CommonResponse<>(0, "");
+        if (null == o) {
+            return response;
+        } else if (o instanceof CommonResponse) {
+            response = (CommonResponse<Object>) o;
+        } else {
+            response.setData(o);
+        }
+        System.out.println("*********response*******"+response.getData() );
+        return response;
+    }
+
+
+
+   /* @Nullable
     @Override
     public Object beforeBodyWrite(@Nullable Object o,
                                   MethodParameter methodParameter,
@@ -45,5 +68,5 @@ public class CommonResponseDataAdvice implements ResponseBodyAdvice{
             response.setData(o);
         }
         return response;
-    }
+    }*/
 }

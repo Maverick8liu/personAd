@@ -29,7 +29,7 @@
         </dependency>
 
 
-        <!-- 通用模块 -->
+        <!-- 通用模块-->
         <dependency>
             <groupId>imooc.ad</groupId>
             <artifactId>ad-common</artifactId>

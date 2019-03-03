@@ -12,7 +12,9 @@ public class GlobalExceptionAdvice {
 
     @ExceptionHandler(value = AdException.class)
     public CommonResponse<String> handleAdException(HttpServletRequest req, AdException ex){
-        CommonResponse<String> response = new CommonResponse<>(-1,"business errror");
+        CommonResponse<String> response = new CommonResponse<>(-1,
+                "business error");
+        response.setData(ex.getMessage());
         return response;
     }
 

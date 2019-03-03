@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class FirstController {
 
     @GetMapping("firstBoot")
-    public String firstBoot(){
+    public String firstBoot() {
         return "this is my firstBoot";
     }
 }

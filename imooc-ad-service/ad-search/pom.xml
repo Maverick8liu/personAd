@@ -69,12 +69,12 @@
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
         </dependency>
-        <!-- 通用模块 -->
+        <!-- 通用模块
         <dependency>
             <groupId>imooc.ad</groupId>
             <artifactId>ad-common</artifactId>
             <version>1.0-SNAPSHOT</version>
-        </dependency>
+        </dependency>-->
         <!-- apache 提供的一些工具类 -->
         <dependency>
             <groupId>commons-codec</groupId>
@@ -103,6 +103,11 @@
             <groupId>org.springframework.kafka</groupId>
             <artifactId>spring-kafka</artifactId>
             <version>2.1.5.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>imooc.ad</groupId>
+            <artifactId>ad-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
