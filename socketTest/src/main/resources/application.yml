@@ -1,0 +1,18 @@
+server:
+  port: 8081
+
+spring:
+  thymeleaf:
+    cache: false
+
+
+
+
+
+socketpkg:
+  host: 172.16.201.148
+  username: ansroot
+  password: ansroot
+  port: 8090
+  time_out: 10
+  charset: UTF-8
